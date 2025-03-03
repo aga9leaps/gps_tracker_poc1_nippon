@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nippon Paint India - Vehicle Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --nippon-red: #E31E24;
+        --nippon-blue: #1B3668;
+        --nippon-gray: #58595B;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f9fa;
+        color: var(--nippon-gray);
+      }
+
+      #header {
+        background: var(--nippon-blue);
+        padding: 8px 20px; /* Reduced padding */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        height: 60px; /* Reduced from 70px */
+      }
+
+      #logo {
+        height: 40px; /* Reduced from 50px */
+        filter: none; /* Remove the filter */
+        object-fit: contain;
+        max-width: 200px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 90px auto 40px; /* Increased top margin from 40px */
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      h1 {
+        color: var(--nippon-blue);
+        margin-bottom: 30px;
+        font-size: 1.5em;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--nippon-gray);
+        font-weight: 500;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background: var(--nippon-red);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background: #c41920;
+      }
+
+      button:disabled {
+        background: var(--nippon-gray);
+        cursor: not-allowed;
+      }
+
+      #status {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        display: none;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .success {
+        background: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #a5d6a7;
+      }
+
+      .error {
+        background: #fbe9e7;
+        color: #c62828;
+        border: 1px solid #ffab91;
+      }
+
+      .tracking-info {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f5f5f5;
+        border-radius: 4px;
+        display: none;
+      }
+
+      .tracking-active {
+        display: block;
+        border-left: 4px solid var(--nippon-red);
+      }
+
+      #location-permission {
+        background: #fff3e0;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border: 1px solid #ffe0b2;
+        display: none;
+      }
+
+      .permission-buttons {
+        margin-top: 10px;
+      }
+
+      .permission-buttons button {
+        margin-right: 10px;
+      }
+
+      .secondary-button {
+        background: var(--nippon-blue);
+      }
+
+      .secondary-button:hover {
+        background: #142a4f;
+      }
+
+      #map { width: 100%; height: 300px; margin-top: 20px; }
+      h1 { font-size: 1.2em; }
+      p { font-size: 0.9em; }
+      #tracking-status {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(0,0,0,0.7);
+        color: white;
+      }
+
+      .status {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px 30px;
+        border-radius: 8px;
+        z-index: 1000;
+        text-align: center;
+        max-width: 80%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      .status.error {
+        background-color: #ffebee;
+        color: #c62828;
+        border: 1px solid #ffcdd2;
+      }
+
+      .status.success {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #c8e6c9;
+      }
+
+      .status.info {
+        background-color: #e3f2fd;
+        color: #1565c0;
+        border: 1px solid #bbdefb;
+      }
+
+      .permission-box {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin: 20px 0;
+        border: 1px solid #ddd;
+      }
+
+      .ios-note {
+        color: var(--nippon-red);
+        font-weight: 500;
+        margin-top: 15px;
+      }
+
+      .ios-instructions {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+
+      .ios-instructions li {
+        margin: 5px 0;
+        color: #666;
+      }
+
+      .permission-buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .primary-button {
+        background: var(--nippon-red);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .secondary-button {
+        background: #666;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #tracking-indicator {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .pulse {
+        width: 10px;
+        height: 10px;
+        background: #4CAF50;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+        }
+        
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+        }
+        
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+        }
+      }
+
+      #trackingButton {
+        background: var(--nippon-red);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #trackingButton:hover {
+        background: #c41920;
+      }
+
+      #trackingButton[disabled] {
+        background: var(--nippon-gray);
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <img id="logo" src="/images/Nippon-Taglines_Nippon-Paint-250x71.jpg" alt="Nippon Paint India">
+    </div>
+
+    <div class="container">
+      <h1>Vehicle Location Tracker</h1>
+      
+      <div id="location-permission" style="display: none;">
+        <div class="permission-box">
+          <h3>Location Access Required</h3>
+          <p>This app needs access to your location to track this vehicle. Please allow location access when prompted.</p>
+          <p class="ios-note">On iOS: You may need to enable location services in your device settings:</p>
+          <ol class="ios-instructions">
+            <li>Open Settings</li>
+            <li>Go to Privacy & Security</li>
+            <li>Select Location Services</li>
+            <li>Enable Location Services</li>
+            <li>Find this website in the list and select "Allow"</li>
+          </ol>
+          <div class="permission-buttons">
+            <button onclick="approveLocation()" class="primary-button">Continue</button>
+            <button onclick="denyLocation()" class="secondary-button">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="vehicleId">Vehicle ID</label>
+        <input type="text" id="vehicleId" placeholder="Enter vehicle ID">
+      </div>
+
+      <button onclick="startTracking()" id="trackingButton">Start Tracking</button>
+
+      <div id="status"></div>
+
+      <div class="tracking-info" id="trackingInfo">
+        <h3>Tracking Status</h3>
+        <p>Vehicle ID: <span id="currentId"></span></p>
+        <p>Last Update: <span id="lastUpdate">Never</span></p>
+        <p>Location: <span id="locationInfo">Waiting for GPS...</span></p>
+      </div>
+    </div>
+
+    <div id="map"></div>
+    <div id="tracking-status"></div>
+
+    <!-- Include Leaflet for map display -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      let watchId = null;
+      let currentTrackingId = null;
+      let wakeLock = null;
+      let keepAliveInterval = null;
+      let updateInterval = null;
+      const UPDATE_FREQUENCY = 1000; // Update every second
+
+      async function startTracking() {
+        const trackingId = document.getElementById('vehicleId').value.trim();
+        if (!trackingId) {
+          showStatus('Please enter a vehicle ID', 'error');
+          return;
+        }
+
+        // Show permission request UI first
+        document.getElementById('location-permission').style.display = 'block';
+        
+        // Request wake lock
+        try {
+          wakeLock = await requestWakeLock();
+        } catch (err) {
+          console.log('Wake Lock error:', err);
+        }
+
+        // Start keep-alive ping
+        startKeepAlive();
+
+        // Start the update timer
+        startUpdateTimer();
+      }
+
+      // Request wake lock to prevent device sleep
+      async function requestWakeLock() {
+        try {
+          if ('wakeLock' in navigator) {
+            const lock = await navigator.wakeLock.request('screen');
+            console.log('Wake Lock is active');
+            return lock;
+          }
+        } catch (err) {
+          console.log('Wake Lock error:', err);
+        }
+        return null;
+      }
+
+      // Keep-alive mechanism
+      function startKeepAlive() {
+        if (keepAliveInterval) {
+          clearInterval(keepAliveInterval);
+        }
+        
+        // Send a ping every 30 seconds
+        keepAliveInterval = setInterval(() => {
+          fetch('/ping', { method: 'POST' })
+            .catch(err => console.log('Keep-alive error:', err));
+          
+          // Reacquire wake lock if needed
+          if (wakeLock === null) {
+            requestWakeLock().then(lock => {
+              wakeLock = lock;
+            });
+          }
+        }, 30000);
+
+        // Listen for visibility change
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        window.addEventListener('focus', handleFocus);
+      }
+
+      // Handle page visibility change
+      async function handleVisibilityChange() {
+        if (document.visibilityState === 'visible') {
+          wakeLock = await requestWakeLock();
+        }
+      }
+
+      // Handle window focus
+      async function handleFocus() {
+        if (!wakeLock) {
+          wakeLock = await requestWakeLock();
+        }
+      }
+
+      async function approveLocation() {
+        const trackingId = document.getElementById('vehicleId').value.trim();
+        
+        try {
+          // iOS specific high-accuracy options
+          const options = {
+            enableHighAccuracy: true,
+            maximumAge: 0,
+            timeout: 10000
+          };
+
+          // First try to get a single location
+          const position = await new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject, options);
+          });
+
+          // If successful, start watching
+          watchId = navigator.geolocation.watchPosition(
+            handleLocationUpdate,
+            handleLocationError,
+            options
+          );
+
+          // Update UI to show Stop Tracking
+          document.getElementById('location-permission').style.display = 'none';
+          const trackingButton = document.getElementById('trackingButton');
+          trackingButton.textContent = 'Stop Tracking';
+          trackingButton.style.background = '#666'; // darker color for stop
+          trackingButton.onclick = stopTracking;
+          
+          // Show tracking info
+          document.getElementById('trackingInfo').style.display = 'block';
+          document.getElementById('currentId').textContent = trackingId;
+          
+          showStatus('Tracking started successfully', 'success');
+
+          // Add tracking indicator
+          addTrackingIndicator();
+
+        } catch (error) {
+          console.error('Location error:', error);
+          handleLocationError(error);
+          document.getElementById('location-permission').style.display = 'none';
+          resetTrackingButton();
+        }
+      }
+
+      function denyLocation() {
+        document.getElementById('location-permission').style.display = 'none';
+        document.getElementById('trackingButton').style.display = 'block';
+        showStatus('Location access denied by user', 'error');
+      }
+
+      function handleLocationUpdate(position) {
+        const locationData = {
+          id: document.getElementById('vehicleId').value.trim(),
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          accuracy: position.coords.accuracy,
+          timestamp: new Date().toISOString(),
+          action: 'tracking'  // Add this flag
+        };
+
+        // Update UI immediately
+        document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
+        document.getElementById('locationInfo').textContent = 
+          `Lat: ${position.coords.latitude.toFixed(6)}, Long: ${position.coords.longitude.toFixed(6)}`;
+
+        // Update map
+        if (map && marker) {
+          marker.setLatLng([position.coords.latitude, position.coords.longitude]);
+          map.setView([position.coords.latitude, position.coords.longitude], 15);
+        }
+
+        // Send to server
+        fetch('/location-update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(locationData)
+        }).catch(error => console.error('Error sending location:', error));
+      }
+
+      function handleLocationError(error) {
+        let message;
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            message = "Location permission denied. Please enable location services in your device settings.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            message = "Location information unavailable. Please check your device's GPS.";
+            break;
+          case error.TIMEOUT:
+            message = "Location request timed out. Please try again.";
+            break;
+          default:
+            message = "An unknown error occurred while getting location.";
+        }
+        
+        document.getElementById('locationInfo').textContent = message;
+        showStatus(message, 'error');
+        resetTrackingButton();
+      }
+
+      // Add visible error/status display
+      function showStatus(message, type = 'info') {
+        const statusDiv = document.getElementById('status');
+        if (!statusDiv) {
+          const div = document.createElement('div');
+          div.id = 'status';
+          document.body.appendChild(div);
+        }
+        
+        const div = document.getElementById('status');
+        div.className = `status ${type}`;
+        div.textContent = message;
+        div.style.display = 'block';
+      }
+
+      // Register service worker for PWA
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered:', reg.scope))
+          .catch(err => console.error('Service Worker registration failed:', err));
+      }
+
+      // Initialize Leaflet map
+      var map = L.map('map').setView([0, 0], 2);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+      var marker = L.marker([0, 0]).addTo(map);
+
+      // Add a visible tracking indicator
+      function addTrackingIndicator() {
+        const indicator = document.createElement('div');
+        indicator.id = 'tracking-indicator';
+        indicator.innerHTML = `
+          <div class="pulse"></div>
+          <span>Tracking Active</span>
+        `;
+        document.body.appendChild(indicator);
+      }
+
+      function startUpdateTimer() {
+        if (updateInterval) {
+          clearInterval(updateInterval);
+        }
+
+        updateInterval = setInterval(async () => {
+          const locationData = {
+            id: document.getElementById('vehicleId').value.trim(),
+            action: 'tracking'  // Add this flag to indicate active tracking
+          };
+
+          try {
+            // Send tracking status to server
+            await fetch('/tracking-status', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(locationData)
+            });
+          } catch (error) {
+            console.error('Error updating tracking status:', error);
+          }
+        }, UPDATE_FREQUENCY);
+      }
+
+      async function stopTracking() {
+        if (watchId) {
+          navigator.geolocation.clearWatch(watchId);
+          watchId = null;
+        }
+        if (wakeLock) {
+          wakeLock.release();
+          wakeLock = null;
+        }
+        if (keepAliveInterval) {
+          clearInterval(keepAliveInterval);
+          keepAliveInterval = null;
+        }
+        if (updateInterval) {
+          clearInterval(updateInterval);
+          updateInterval = null;
+        }
+
+        // Notify server that tracking has stopped
+        try {
+          const locationData = {
+            id: document.getElementById('vehicleId').value.trim(),
+            action: 'stopped'
+          };
+
+          await fetch('/tracking-status', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(locationData)
+          });
+        } catch (error) {
+          console.error('Error updating tracking status:', error);
+        }
+
+        // Remove event listeners
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        window.removeEventListener('focus', handleFocus);
+
+        // Reset UI
+        resetTrackingButton();
+        
+        // Remove tracking indicator
+        const indicator = document.getElementById('tracking-indicator');
+        if (indicator) {
+          indicator.remove();
+        }
+
+        // Hide tracking info
+        document.getElementById('trackingInfo').style.display = 'none';
+        
+        showStatus('Tracking stopped', 'info');
+      }
+
+      function resetTrackingButton() {
+        const trackingButton = document.getElementById('trackingButton');
+        trackingButton.textContent = 'Start Tracking';
+        trackingButton.style.background = 'var(--nippon-red)';
+        trackingButton.onclick = startTracking;
+      }
+    </script>
+  </body>
+</html>

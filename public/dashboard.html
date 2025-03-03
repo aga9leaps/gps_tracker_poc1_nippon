@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nippon Paint India - Vehicle Tracking Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/delivery-truck.png">
+    <style>
+        :root {
+            --nippon-red: #E31E24;
+            --nippon-blue: #1B3668;
+            --nippon-gray: #58595B;
+        }
+        
+        body { 
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            color: var(--nippon-gray);
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--nippon-blue);
+            padding: 8px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        #logo {
+            height: 40px;
+            margin-right: 30px;
+            filter: none;
+            object-fit: contain;
+            max-width: 200px;
+        }
+
+        #header-title {
+            color: white;
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-left: 10px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        #main-content {
+            margin-top: 80px;
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 80px);
+        }
+
+        #sidebar {
+            width: 300px;
+            background: #f8f9fa;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        #map-container {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        #map { 
+            height: 100%;
+        }
+
+        .tracker-item {
+            position: relative;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 4px;
+            border-left: 4px solid var(--nippon-red);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .delete-button {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: none;
+            color: #666;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 4px 8px;
+            transition: color 0.2s;
+            z-index: 2;
+        }
+
+        .delete-button:hover {
+            color: var(--nippon-red);
+        }
+
+        .tracker-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .active {
+            border-left: 4px solid var(--nippon-red);
+        }
+
+        .inactive {
+            border-left: 4px solid var(--nippon-gray);
+            opacity: 0.7;
+        }
+
+        .selected {
+            background: #f0f7ff;
+            border: 1px solid var(--nippon-blue);
+        }
+
+        .tracker-status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .status-active {
+            background-color: var(--nippon-red);
+            color: white;
+        }
+
+        .status-inactive {
+            background-color: var(--nippon-gray);
+            color: white;
+        }
+
+        #connection-status {
+            position: fixed;
+            top: 80px;
+            right: 10px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            z-index: 1000;
+            font-size: 0.9em;
+        }
+
+        #next-update-info {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            font-size: 0.9em;
+            color: var(--nippon-blue);
+        }
+
+        .countdown {
+            color: var(--nippon-red);
+            font-weight: 500;
+        }
+
+        .spinner {
+            border-top-color: var(--nippon-red);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: white;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .notification.success {
+            background: #4caf50;
+        }
+
+        .notification.error {
+            background: var(--nippon-red);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .error-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff4444;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .custom-marker {
+            text-align: center;
+        }
+
+        .marker-content {
+            position: relative;
+            display: inline-block;
+        }
+
+        .truck-icon {
+            width: 32px;
+            height: 32px;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+        }
+
+        .truck-label {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .marker-popup {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .marker-popup h3 {
+            margin: 0;
+            color: var(--nippon-blue);
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo" src="/images/Nippon-Taglines_Nippon-Paint-250x71.jpg" alt="Nippon Paint India">
+        <div id="header-title">Vehicle Tracking Dashboard</div>
+        <div id="next-update-info">
+            Next GPS Update: <span id="global-countdown" class="countdown">calculating...</span>
+        </div>
+    </div>
+    
+    <div id="main-content">
+        <div id="connection-status" class="connected">Connected</div>
+        <div id="sidebar">
+            <h2 style="color: var(--nippon-blue); margin-bottom: 20px;">Active Vehicles</h2>
+            <div id="tracker-list"></div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        let map;
+        let markers = {};
+        let paths = {};
+        let updateInterval;
+        let inactiveThreshold;  // Will be set from server config
+        let activeTrackers = new Set();
+        let updateTimer = null;
+        let retryCount = 0;
+        let isConnected = true;
+        let globalUpdateTimer = null;
+
+        // Fetch server configuration
+        async function getConfig() {
+            try {
+                const response = await fetch('/config');
+                const config = await response.json();
+                updateInterval = config.updateFrequency;
+                inactiveThreshold = config.inactiveThreshold;  // Get inactive threshold from server
+                return config;
+            } catch (error) {
+                console.error('Error fetching config:', error);
+                // Default values if config fetch fails
+                return { 
+                    updateFrequency: 60000,
+                    dashboardFrequency: 30000,
+                    inactiveThreshold: 300000 
+                };
+            }
+        }
+
+        function updateConnectionStatus(status) {
+            const statusDiv = document.getElementById('connection-status');
+            statusDiv.className = status;
+            switch(status) {
+                case 'connected':
+                    statusDiv.textContent = 'Connected';
+                    break;
+                case 'disconnected':
+                    statusDiv.textContent = 'Disconnected';
+                    break;
+                case 'reconnecting':
+                    statusDiv.textContent = 'Reconnecting...';
+                    break;
+            }
+        }
+
+        async function initializeTracking() {
+            try {
+                const config = await getConfig();
+                updateInterval = config.updateFrequency;
+                inactiveThreshold = config.inactiveThreshold;
+                
+                initMap();
+                
+                // Immediately fetch and display current data
+                await updateTrackers();
+                console.log('Initial GPS data loaded');
+                
+                // Start the global countdown
+                startGlobalCountdown();
+                
+                // Schedule regular updates
+                scheduleUpdate(updateInterval);
+            } catch (error) {
+                console.error('Error initializing tracking:', error);
+                // Show error message to user
+                const errorDiv = document.createElement('div');
+                errorDiv.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #f44336;
+                    color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    z-index: 2000;
+                `;
+                errorDiv.innerHTML = `
+                    <h3>Error Loading GPS Data</h3>
+                    <p>${error.message}</p>
+                    <button onclick="location.reload()" style="padding: 8px 16px; margin-top: 10px;">
+                        Retry
+                    </button>
+                `;
+                document.body.appendChild(errorDiv);
+            }
+        }
+
+        function scheduleUpdate(delay = 0) {
+            if (updateTimer) {
+                clearTimeout(updateTimer);
+            }
+            updateTimer = setTimeout(async () => {
+                try {
+                    await updateTrackers();
+                    // Schedule next update only if this one succeeded
+                    scheduleUpdate(updateInterval);
+                } catch (error) {
+                    console.error('Error in update cycle:', error);
+                    handleUpdateError(error);
+                }
+            }, delay);
+        }
+
+        function handleUpdateError(error) {
+            console.error('Error updating trackers:', error);
+            retryCount++;
+            
+            if (!isConnected) {
+                updateConnectionStatus('disconnected');
+            }
+
+            // Calculate delay with exponential backoff
+            const delay = Math.min(1000 * Math.pow(2, retryCount), 30000); // Max 30 seconds
+            console.log(`Retrying in ${delay/1000} seconds...`);
+            
+            updateConnectionStatus('reconnecting');
+            scheduleUpdate(delay);
+        }
+
+        function toIST(date) {
+            if (typeof date === 'string') {
+                date = new Date(date);
+            }
+            return date.toLocaleString('en-IN', {
+                timeZone: 'Asia/Kolkata',
+                hour12: true,
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+        }
+
+        function formatTimeSince(ms) {
+            const seconds = Math.floor(ms / 1000);
+            if (seconds < 60) return `${seconds}s`;
+            const minutes = Math.floor(seconds / 60);
+            if (minutes < 60) return `${minutes}m`;
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return `${hours}h ${minutes % 60}m`;
+            const days = Math.floor(hours / 24);
+            return `${days}d ${hours % 24}h`;
+        }
+
+        async function updateTrackers() {
+            try {
+                const response = await fetch('/locations');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                const trackerList = document.getElementById('tracker-list');
+                trackerList.innerHTML = '';
+                
+                Object.entries(data).forEach(([id, trackerData]) => {
+                    if (!trackerData.locations || trackerData.locations.length === 0) return;
+                    
+                    const lastLocation = trackerData.locations[trackerData.locations.length - 1];
+                    const timeSinceUpdate = new Date() - new Date(lastLocation.timestamp);
+                    const isActive = trackerData.isActive && timeSinceUpdate < inactiveThreshold;
+                    
+                    // Create or update marker
+                    if (!markers[id]) {
+                        // Create truck icon
+                        const truckIcon = L.divIcon({
+                            className: 'custom-marker',
+                            html: `
+                                <div class="marker-content">
+                                    <img src="/images/delivery-truck.png" class="truck-icon" alt="🚛">
+                                    <span class="truck-label">${id}</span>
+                                </div>
+                            `,
+                            iconSize: [40, 40],
+                            iconAnchor: [20, 20]
+                        });
+
+                        // Create marker with truck icon
+                        markers[id] = L.marker([lastLocation.latitude, lastLocation.longitude], {
+                            icon: truckIcon
+                        }).addTo(map);
+
+                        // Bind simple popup
+                        markers[id].bindPopup(`<div class="marker-popup"><h3>🚛 ${id}</h3></div>`);
+                    } else {
+                        // Update existing marker position
+                        markers[id].setLatLng([lastLocation.latitude, lastLocation.longitude]);
+                    }
+                    
+                    const div = document.createElement('div');
+                    div.className = `tracker-item ${isActive ? 'active' : 'inactive'}`;
+                    div.id = `tracker-${id}`;
+                    
+                    const countdownId = `countdown-${id.replace(/[^a-zA-Z0-9]/g, '-')}`;
+                    
+                    div.innerHTML = `
+                        <button class="delete-button" onclick="deleteTracker('${id}', event)">×</button>
+                        ${id}
+                        <span class="tracker-status ${isActive ? 'status-active' : 'status-inactive'}">
+                            ${isActive ? 'TRACKING' : 'NOT TRACKING'}
+                        </span>
+                        <div class="tracker-info">
+                            <span class="last-update">
+                                Last update: ${formatTimeSince(timeSinceUpdate)} ago
+                            </span>
+                            <br>
+                            <span class="timestamp">
+                                (${toIST(lastLocation.timestamp)})
+                            </span>
+                            ${isActive ? `
+                                <div class="next-update">
+                                    Next update in: <span id="${countdownId}" class="countdown">calculating...</span>
+                                </div>
+                            ` : `
+                                <div class="inactive-message">
+                                    ⚠️ Tracker has not reported in ${formatTimeSince(timeSinceUpdate)}
+                                </div>
+                            `}
+                        </div>
+                    `;
+                    
+                    div.onclick = (e) => {
+                        if (e.target.className !== 'delete-button') {
+                            showTrackerPath(id, trackerData.locations);
+                        }
+                    };
+                    
+                    trackerList.appendChild(div);
+                });
+                
+            } catch (error) {
+                console.error('Error updating trackers:', error);
+                showError('Failed to update trackers: ' + error.message);
+            }
+        }
+
+        function updateMarkerPosition(id, location, isInactive = false) {
+            const latlng = [location.latitude, location.longitude];
+            
+            const truckIcon = L.divIcon({
+                html: `
+                    <div style="
+                        position: relative;
+                        text-align: center;
+                    ">
+                        <div style="
+                            font-size: 24px;
+                            background: ${isInactive ? '#f44336' : 'white'};
+                            padding: 8px 16px;
+                            border-radius: 8px;
+                            border: 2px solid ${isInactive ? '#f44336' : '#4CAF50'};
+                            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                            color: ${isInactive ? 'white' : 'black'};
+                            opacity: ${isInactive ? '0.8' : '1'};
+                        ">
+                            🚛
+                        </div>
+                        <div style="
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            white-space: nowrap;
+                            background: ${isInactive ? '#f44336' : '#4CAF50'};
+                            color: white;
+                            padding: 2px 8px;
+                            border-radius: 4px;
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin-top: 2px;
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        ">
+                            ${id}
+                        </div>
+                    </div>
+                `,
+                className: 'truck-marker',
+                iconSize: null,
+                iconAnchor: [25, 25]  // Adjust these values to center the marker
+            });
+            
+            if (markers[id]) {
+                markers[id].setLatLng(latlng);
+                markers[id].setIcon(truckIcon);
+                markers[id].getPopup().setContent(`
+                    <strong>🚛 ${id}</strong><br>
+                    Status: ${isInactive ? '<span style="color: #f44336">NOT TRACKING</span>' : '<span style="color: #4CAF50">TRACKING</span>'}<br>
+                    Last update: ${toIST(location.timestamp)}<br>
+                    Lat: ${location.latitude.toFixed(6)}<br>
+                    Lng: ${location.longitude.toFixed(6)}
+                `);
+            } else {
+                markers[id] = L.marker(latlng, { icon: truckIcon })
+                    .bindPopup(`
+                        <strong>🚛 ${id}</strong><br>
+                        Status: ${isInactive ? '<span style="color: #f44336">NOT TRACKING</span>' : '<span style="color: #4CAF50">TRACKING</span>'}<br>
+                        Last update: ${toIST(location.timestamp)}<br>
+                        Lat: ${location.latitude.toFixed(6)}<br>
+                        Lng: ${location.longitude.toFixed(6)}
+                    `)
+                    .addTo(map);
+            }
+
+            if (paths[id]) {
+                const path = paths[id].getLatLngs();
+                path.push(latlng);
+                paths[id].setLatLngs(path);
+            }
+        }
+
+        // Initialize map
+        function initMap() {
+            map = L.map('map').setView([0, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        }
+
+        function showTrackerPath(id, locations) {
+            // Clear any existing paths
+            Object.values(paths).forEach(path => map.removeLayer(path));
+            paths = {};
+
+            // Create path from locations
+            const pathCoords = locations.map(loc => [loc.latitude, loc.longitude]);
+            paths[id] = L.polyline(pathCoords, {
+                color: 'var(--nippon-red)',
+                weight: 3,
+                opacity: 0.8
+            }).addTo(map);
+
+            // Simple popup with just the ID
+            const popupContent = `
+                <div class="marker-popup">
+                    <h3>🚛 ${id}</h3>
+                </div>
+            `;
+
+            // Create or update popup
+            if (!markers[id].getPopup()) {
+                markers[id].bindPopup(popupContent);
+            } else {
+                markers[id].getPopup().setContent(popupContent);
+            }
+            
+            markers[id].openPopup();
+
+            // Fit map to show entire path
+            map.fitBounds(paths[id].getBounds(), {
+                padding: [50, 50]
+            });
+
+            // Highlight selected tracker in sidebar
+            document.querySelectorAll('.tracker-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            document.getElementById(`tracker-${id}`)?.classList.add('selected');
+        }
+
+        // Add this function to handle individual tracker countdowns
+        function startCountdown(countdownId, lastUpdateTime) {
+            const updateElement = document.getElementById(countdownId);
+            if (!updateElement) return;
+
+            const lastUpdate = new Date(lastUpdateTime);
+            const nextUpdate = new Date(lastUpdate.getTime() + updateInterval);
+            
+            function updateCountdown() {
+                const now = new Date();
+                const timeUntilUpdate = nextUpdate - now;
+                
+                if (updateElement) {
+                    updateElement.textContent = formatCountdown(timeUntilUpdate);
+                }
+                
+                if (timeUntilUpdate > 0) {
+                    requestAnimationFrame(updateCountdown);
+                }
+            }
+            
+            updateCountdown();
+        }
+
+        // Helper function to format countdown time
+        function formatCountdown(ms) {
+            if (ms < 0) return "updating...";
+            const seconds = Math.floor(ms / 1000);
+            if (seconds < 60) return `${seconds}s`;
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes}m ${remainingSeconds}s`;
+        }
+
+        // Add this function to handle the global countdown
+        function startGlobalCountdown() {
+            const countdownElement = document.getElementById('global-countdown');
+            if (!countdownElement) return;
+
+            function updateGlobalCountdown() {
+                const now = new Date();
+                // Calculate next update time based on the update interval
+                const nextUpdate = new Date(Math.ceil(now.getTime() / updateInterval) * updateInterval);
+                const timeUntilUpdate = nextUpdate - now;
+                
+                countdownElement.textContent = formatCountdown(timeUntilUpdate);
+                
+                // Continue updating
+                globalUpdateTimer = requestAnimationFrame(updateGlobalCountdown);
+            }
+            
+            updateGlobalCountdown();
+        }
+
+        // Clean up function for animation frame
+        function cleanupCountdowns() {
+            if (globalUpdateTimer) {
+                cancelAnimationFrame(globalUpdateTimer);
+            }
+        }
+
+        // Add cleanup on page unload
+        window.addEventListener('unload', cleanupCountdowns);
+
+        // Add loading indicator
+        function showLoading() {
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loading-indicator';
+            loadingDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.9);
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            `;
+            loadingDiv.innerHTML = `
+                <div style="text-align: center;">
+                    <div style="margin-bottom: 10px;">Loading GPS Data...</div>
+                    <div class="spinner"></div>
+                </div>
+            `;
+            document.body.appendChild(loadingDiv);
+        }
+
+        function hideLoading() {
+            const loadingDiv = document.getElementById('loading-indicator');
+            if (loadingDiv) {
+                loadingDiv.remove();
+            }
+        }
+
+        // Initialize everything when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            showLoading();
+            initializeTracking().finally(() => {
+                hideLoading();
+            });
+        });
+
+        async function deleteTracker(trackerId, event) {
+            // Prevent the click from bubbling up to the tracker item
+            event.stopPropagation();
+            
+            try {
+                const response = await fetch(`/locations/${trackerId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText || 'Failed to delete tracker');
+                }
+
+                // Remove marker from map
+                if (markers[trackerId]) {
+                    map.removeLayer(markers[trackerId]);
+                    delete markers[trackerId];
+                }
+                
+                // Remove path from map
+                if (paths[trackerId]) {
+                    map.removeLayer(paths[trackerId]);
+                    delete paths[trackerId];
+                }
+
+                // Remove the tracker element from DOM
+                const trackerElement = document.getElementById(`tracker-${trackerId}`);
+                if (trackerElement) {
+                    trackerElement.remove();
+                }
+
+                // Clear from active trackers
+                activeTrackers.delete(trackerId);
+
+                // Refresh the trackers list
+                await updateTrackers();
+
+                showNotification('Tracker deleted successfully', 'success');
+
+            } catch (error) {
+                console.error('Error deleting tracker:', error);
+                showNotification(`Failed to delete tracker: ${error.message}`, 'error');
+            }
+        }
+
+        function showNotification(message, type = 'error') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            
+            // Remove any existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(n => n.remove());
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Helper function to show errors
+        function showError(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            document.body.appendChild(errorDiv);
+            setTimeout(() => errorDiv.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
