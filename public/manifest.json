@@ -1,21 +1,15 @@
 {
-    "name": "Real-Time Tracking PWA",
-    "short_name": "TrackingPWA",
-    "start_url": "index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4CAF50",
-    "icons": [
-      {
-        "src": "icon-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "icon-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
+  "name": "Nippon Paint Vehicle Tracker",
+  "short_name": "NPTracker",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1B3668",
+  "theme_color": "#E31E24",
+  "icons": [
+  {
+    "src": "images/delivery-truck.png",
+    "sizes": "192x192",
+    "type": "image/png"
   }
-  
+  ]
+}

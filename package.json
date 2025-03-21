@@ -1,15 +1,31 @@
 {
   "name": "gps_tracker_poc1_nippon",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
-  }
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "path": "^0.12.7",
+    "querystring": "^0.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aga9leaps/gps_tracker_poc1_nippon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aga9leaps/gps_tracker_poc1_nippon/issues"
+  },
+  "homepage": "https://github.com/aga9leaps/gps_tracker_poc1_nippon#readme",
+  "description": "Real-time vehicle tracking system for Nippon Paint India"
 }

@@ -1,0 +1,680 @@
+
+========== DIAGNOSTIC LOG 2025-03-19T03:51:24.176Z ==========
+Device ID: unknown_device
+User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36
+Screen: 412x919
+Failure Logs: 0
+Success Logs: 20
+Pending Failure Logs: 0
+
+FAILURE DETAILS:
+[]
+
+SUCCESS DETAILS:
+[
+  {
+    "timestamp": "2025-03-18T15:53:55.678Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:55.905Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:56.728Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:56.736Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:57.746Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:57.772Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:58.680Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:58.889Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:59.727Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:53:59.941Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:00.717Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:00.719Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:01.670Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:01.899Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:02.772Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:02.895Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:17.869Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:18.162Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:19.475Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  },
+  {
+    "timestamp": "2025-03-18T15:54:19.706Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 1.15
+    }
+  }
+]
+
+TRACKING DETAILS:
+[
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821182,
+      "longitude": 77.5797745,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:21.271Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 1.15,
+          "rtt": 100,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:21.271Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821182,
+      "longitude": 77.5797745,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:21.272Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 1.15,
+          "rtt": 100,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:21.273Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.882119,
+      "longitude": 77.5797773,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:22.296Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 1.15,
+          "rtt": 100,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:22.296Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.882119,
+      "longitude": 77.5797773,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:22.297Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 1.15,
+          "rtt": 100,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:22.298Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821178,
+      "longitude": 77.5797799,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:23.293Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:23.294Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821178,
+      "longitude": 77.5797799,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:23.295Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:23.296Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821177,
+      "longitude": 77.5797826,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:24.278Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:24.278Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821177,
+      "longitude": 77.5797826,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:24.279Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:24.280Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821167,
+      "longitude": 77.5797837,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:25.262Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:25.263Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821167,
+      "longitude": 77.5797837,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:25.264Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:25.264Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821185,
+      "longitude": 77.5797844,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:26.293Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:26.294Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821185,
+      "longitude": 77.5797844,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:26.295Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:26.296Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821213,
+      "longitude": 77.5797853,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:27.268Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:27.269Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821213,
+      "longitude": 77.5797853,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:27.270Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:27.271Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821221,
+      "longitude": 77.5797848,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:28.263Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:28.264Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821221,
+      "longitude": 77.5797848,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:28.265Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:28.265Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.882123,
+      "longitude": 77.5797815,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:29.276Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:29.277Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.882123,
+      "longitude": 77.5797815,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:29.279Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:29.280Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821215,
+      "longitude": 77.5797798,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:30.253Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:30.254Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Pavan",
+      "latitude": 12.8821215,
+      "longitude": 77.5797798,
+      "accuracy": 3.7899999618530273,
+      "timestamp": "2025-03-18T15:54:30.255Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 61,
+          "charging": false
+        },
+        "network": {
+          "type": "3g",
+          "downlink": 1.15,
+          "rtt": 300,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T15:54:30.255Z"
+  }
+]
+==========================================================

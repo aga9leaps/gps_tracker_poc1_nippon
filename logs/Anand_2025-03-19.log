@@ -1,0 +1,2040 @@
+
+========== DIAGNOSTIC LOG 2025-03-19T02:56:01.076Z ==========
+Device ID: Anand
+User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36
+Screen: 424x932
+Failure Logs: 0
+Success Logs: 20
+Pending Failure Logs: 0
+
+FAILURE DETAILS:
+[]
+
+SUCCESS DETAILS:
+[
+  {
+    "timestamp": "2025-03-18T12:55:01.419Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:02.342Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:03.364Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:04.202Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:05.215Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:06.237Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:07.214Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:08.390Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:09.224Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:10.232Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:11.258Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:12.378Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:13.295Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:14.325Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:15.225Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:16.368Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:17.279Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T12:55:18.225Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T13:07:53.866Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  },
+  {
+    "timestamp": "2025-03-18T13:07:54.050Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 10
+    }
+  }
+]
+
+TRACKING DETAILS:
+[
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292131,
+      "longitude": 77.6105949,
+      "accuracy": 4.5970001220703125,
+      "timestamp": "2025-03-18T12:55:00.826Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:00.828Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292108,
+      "longitude": 77.6105941,
+      "accuracy": 4.526000022888184,
+      "timestamp": "2025-03-18T12:55:01.797Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:01.798Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292135,
+      "longitude": 77.6105956,
+      "accuracy": 4.488999843597412,
+      "timestamp": "2025-03-18T12:55:02.804Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:02.805Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292123,
+      "longitude": 77.6105965,
+      "accuracy": 4.519000053405762,
+      "timestamp": "2025-03-18T12:55:03.814Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:03.815Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292151,
+      "longitude": 77.6105942,
+      "accuracy": 4.388000011444092,
+      "timestamp": "2025-03-18T12:55:04.801Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:04.803Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292138,
+      "longitude": 77.6105952,
+      "accuracy": 4.388000011444092,
+      "timestamp": "2025-03-18T12:55:05.809Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:05.811Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292133,
+      "longitude": 77.6105979,
+      "accuracy": 4.38700008392334,
+      "timestamp": "2025-03-18T12:55:06.806Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:06.809Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292133,
+      "longitude": 77.6105999,
+      "accuracy": 4.375,
+      "timestamp": "2025-03-18T12:55:07.816Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:07.818Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292117,
+      "longitude": 77.6106025,
+      "accuracy": 4.3420000076293945,
+      "timestamp": "2025-03-18T12:55:08.812Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:08.815Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292151,
+      "longitude": 77.6105967,
+      "accuracy": 4.357999801635742,
+      "timestamp": "2025-03-18T12:55:09.806Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:09.807Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292144,
+      "longitude": 77.6105973,
+      "accuracy": 4.320000171661377,
+      "timestamp": "2025-03-18T12:55:10.815Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:10.816Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292134,
+      "longitude": 77.6106004,
+      "accuracy": 4.276000022888184,
+      "timestamp": "2025-03-18T12:55:11.791Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:11.793Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292129,
+      "longitude": 77.6106012,
+      "accuracy": 4.210999965667725,
+      "timestamp": "2025-03-18T12:55:12.786Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:12.786Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292124,
+      "longitude": 77.610603,
+      "accuracy": 4.125,
+      "timestamp": "2025-03-18T12:55:13.803Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:13.805Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929217,
+      "longitude": 77.610599,
+      "accuracy": 4.005000114440918,
+      "timestamp": "2025-03-18T12:55:14.798Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:14.798Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929217,
+      "longitude": 77.6105953,
+      "accuracy": 3.890000104904175,
+      "timestamp": "2025-03-18T12:55:15.784Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:15.784Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292191,
+      "longitude": 77.6105944,
+      "accuracy": 3.8489999771118164,
+      "timestamp": "2025-03-18T12:55:16.776Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:16.776Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292189,
+      "longitude": 77.6105924,
+      "accuracy": 3.9660000801086426,
+      "timestamp": "2025-03-18T12:55:17.791Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.99999999999999,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T12:55:17.791Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9293413,
+      "longitude": 77.610483,
+      "accuracy": 13.49899959564209,
+      "timestamp": "2025-03-18T13:07:53.362Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.00000000000001,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T13:07:53.364Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9293413,
+      "longitude": 77.610483,
+      "accuracy": 13.49899959564209,
+      "timestamp": "2025-03-18T13:07:53.366Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 56.00000000000001,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 10,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-18T13:07:53.366Z"
+  }
+]
+==========================================================
+
+========== DIAGNOSTIC LOG 2025-03-19T03:02:50.936Z ==========
+Device ID: Anand
+User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36
+Screen: 424x932
+Failure Logs: 0
+Success Logs: 20
+Pending Failure Logs: 0
+
+FAILURE DETAILS:
+[]
+
+SUCCESS DETAILS:
+[
+  {
+    "timestamp": "2025-03-19T02:59:41.347Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:42.274Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:43.290Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:44.192Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:45.230Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:46.464Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:47.591Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:48.305Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:49.250Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:50.369Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:51.382Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:52.310Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:53.332Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:54.246Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:55.189Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T02:59:56.313Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:02:13.913Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:02:13.918Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:02:14.004Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:02:15.354Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  }
+]
+
+TRACKING DETAILS:
+[
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292638,
+      "longitude": 77.6104829,
+      "accuracy": 11.715999603271484,
+      "timestamp": "2025-03-19T02:59:40.756Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:40.757Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292613,
+      "longitude": 77.610486,
+      "accuracy": 11.241000175476074,
+      "timestamp": "2025-03-19T02:59:41.760Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:41.761Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292641,
+      "longitude": 77.6104887,
+      "accuracy": 10.6899995803833,
+      "timestamp": "2025-03-19T02:59:42.751Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:42.754Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929264,
+      "longitude": 77.6104893,
+      "accuracy": 10.413000106811523,
+      "timestamp": "2025-03-19T02:59:43.767Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:43.771Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929263,
+      "longitude": 77.6104895,
+      "accuracy": 10.16100025177002,
+      "timestamp": "2025-03-19T02:59:44.742Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:44.744Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292635,
+      "longitude": 77.6104922,
+      "accuracy": 10.15999984741211,
+      "timestamp": "2025-03-19T02:59:45.734Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:45.735Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929263,
+      "longitude": 77.610494,
+      "accuracy": 10.142999649047852,
+      "timestamp": "2025-03-19T02:59:46.751Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:46.752Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292624,
+      "longitude": 77.6104947,
+      "accuracy": 10.140999794006348,
+      "timestamp": "2025-03-19T02:59:47.764Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:47.765Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292619,
+      "longitude": 77.6104952,
+      "accuracy": 10.189000129699707,
+      "timestamp": "2025-03-19T02:59:48.758Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:48.760Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929263,
+      "longitude": 77.6104941,
+      "accuracy": 10.020000457763672,
+      "timestamp": "2025-03-19T02:59:49.778Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:49.780Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292647,
+      "longitude": 77.6104944,
+      "accuracy": 9.663000106811523,
+      "timestamp": "2025-03-19T02:59:50.747Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:50.752Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292628,
+      "longitude": 77.6104947,
+      "accuracy": 9.291999816894531,
+      "timestamp": "2025-03-19T02:59:51.753Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:51.756Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292604,
+      "longitude": 77.6104951,
+      "accuracy": 8.274999618530273,
+      "timestamp": "2025-03-19T02:59:52.766Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:52.769Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292623,
+      "longitude": 77.6104924,
+      "accuracy": 7.38700008392334,
+      "timestamp": "2025-03-19T02:59:53.750Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:53.751Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292642,
+      "longitude": 77.6104916,
+      "accuracy": 6.686999797821045,
+      "timestamp": "2025-03-19T02:59:54.765Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:54.768Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292658,
+      "longitude": 77.6104884,
+      "accuracy": 6.5370001792907715,
+      "timestamp": "2025-03-19T02:59:55.874Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T02:59:55.874Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292658,
+      "longitude": 77.6104884,
+      "accuracy": 100,
+      "timestamp": "2025-03-19T03:02:13.392Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:02:13.395Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292658,
+      "longitude": 77.6104884,
+      "accuracy": 100,
+      "timestamp": "2025-03-19T03:02:13.398Z",
+      "action": "tracking",
+      "source": "keep-alive",
+      "diagnostics": {
+        "visibilityState": "visible",
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        }
+      }
+    },
+    "timestamp": "2025-03-19T03:02:13.401Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292658,
+      "longitude": 77.6104884,
+      "accuracy": 100,
+      "timestamp": "2025-03-19T03:02:13.402Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:02:13.403Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292596,
+      "longitude": 77.6105058,
+      "accuracy": 12.170999526977539,
+      "timestamp": "2025-03-19T03:02:14.555Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:02:14.557Z"
+  }
+]
+==========================================================
+
+========== DIAGNOSTIC LOG 2025-03-19T03:34:44.427Z ==========
+Device ID: Anand
+User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36
+Screen: 424x932
+Failure Logs: 0
+Success Logs: 20
+Pending Failure Logs: 0
+
+FAILURE DETAILS:
+[]
+
+SUCCESS DETAILS:
+[
+  {
+    "timestamp": "2025-03-19T03:04:08.313Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:09.328Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:10.248Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:11.374Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:12.302Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:13.525Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:14.346Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:15.266Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:16.395Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:17.308Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:18.345Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:19.260Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:20.496Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:20.500Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:21.201Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:22.334Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:23.356Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:24.378Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:25.210Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  },
+  {
+    "timestamp": "2025-03-19T03:04:26.501Z",
+    "networkInfo": {
+      "type": "4g",
+      "downlink": 5.75
+    }
+  }
+]
+
+TRACKING DETAILS:
+[
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292686,
+      "longitude": 77.6104697,
+      "accuracy": 3.9560000896453857,
+      "timestamp": "2025-03-19T03:04:07.742Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:07.743Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292689,
+      "longitude": 77.6104708,
+      "accuracy": 3.9059998989105225,
+      "timestamp": "2025-03-19T03:04:08.759Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:08.761Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292666,
+      "longitude": 77.6104697,
+      "accuracy": 3.940000057220459,
+      "timestamp": "2025-03-19T03:04:09.744Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:09.746Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292666,
+      "longitude": 77.6104688,
+      "accuracy": 4.01200008392334,
+      "timestamp": "2025-03-19T03:04:10.763Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:10.764Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929265,
+      "longitude": 77.610467,
+      "accuracy": 3.999000072479248,
+      "timestamp": "2025-03-19T03:04:11.749Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:11.751Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292657,
+      "longitude": 77.6104687,
+      "accuracy": 4.046999931335449,
+      "timestamp": "2025-03-19T03:04:12.744Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:12.745Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292662,
+      "longitude": 77.6104707,
+      "accuracy": 4.085999965667725,
+      "timestamp": "2025-03-19T03:04:13.745Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:13.746Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292657,
+      "longitude": 77.6104714,
+      "accuracy": 4.078000068664551,
+      "timestamp": "2025-03-19T03:04:14.763Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:14.764Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.929264,
+      "longitude": 77.6104708,
+      "accuracy": 4.025000095367432,
+      "timestamp": "2025-03-19T03:04:15.750Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:15.751Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292634,
+      "longitude": 77.6104707,
+      "accuracy": 5.120999813079834,
+      "timestamp": "2025-03-19T03:04:16.743Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:16.744Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292608,
+      "longitude": 77.610468,
+      "accuracy": 6.539999961853027,
+      "timestamp": "2025-03-19T03:04:17.748Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:17.749Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292626,
+      "longitude": 77.6104698,
+      "accuracy": 7.741000175476074,
+      "timestamp": "2025-03-19T03:04:18.741Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:18.742Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292621,
+      "longitude": 77.6104697,
+      "accuracy": 8.920999526977539,
+      "timestamp": "2025-03-19T03:04:19.760Z",
+      "action": "tracking",
+      "source": "keep-alive",
+      "diagnostics": {
+        "visibilityState": "visible",
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        }
+      }
+    },
+    "timestamp": "2025-03-19T03:04:19.760Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292621,
+      "longitude": 77.6104697,
+      "accuracy": 8.920999526977539,
+      "timestamp": "2025-03-19T03:04:19.762Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:19.763Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292629,
+      "longitude": 77.6104705,
+      "accuracy": 10.121999740600586,
+      "timestamp": "2025-03-19T03:04:20.738Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:20.739Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292604,
+      "longitude": 77.6104709,
+      "accuracy": 9.98799991607666,
+      "timestamp": "2025-03-19T03:04:21.768Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:21.769Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292579,
+      "longitude": 77.6104734,
+      "accuracy": 9.979000091552734,
+      "timestamp": "2025-03-19T03:04:22.759Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:22.760Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292578,
+      "longitude": 77.610474,
+      "accuracy": 9.9350004196167,
+      "timestamp": "2025-03-19T03:04:23.750Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:23.751Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292592,
+      "longitude": 77.6104737,
+      "accuracy": 9.9350004196167,
+      "timestamp": "2025-03-19T03:04:24.741Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:24.742Z"
+  },
+  {
+    "type": "location_attempt",
+    "data": {
+      "id": "Anand",
+      "latitude": 12.9292597,
+      "longitude": 77.6104756,
+      "accuracy": 9.9350004196167,
+      "timestamp": "2025-03-19T03:04:25.731Z",
+      "action": "tracking",
+      "diagnostics": {
+        "battery": {
+          "level": 92,
+          "charging": false
+        },
+        "network": {
+          "type": "4g",
+          "downlink": 5.75,
+          "rtt": 50,
+          "saveData": false
+        },
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+        "visibilityState": "visible"
+      }
+    },
+    "timestamp": "2025-03-19T03:04:25.732Z"
+  }
+]
+==========================================================

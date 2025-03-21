@@ -1,0 +1,322 @@
+:root {
+    --nippon-red: #E31E24;
+    --nippon-blue: #1B3668;
+    --nippon-gray: #58595B;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: var(--nippon-gray);
+  }
+  
+  #header {
+    background: var(--nippon-blue);
+    padding: 8px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  
+  #logo {
+    height: 40px;
+    filter: none;
+    object-fit: contain;
+    max-width: 200px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 90px auto 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    color: var(--nippon-blue);
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--nippon-gray);
+    font-weight: 500;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: var(--nippon-red);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background: #c41920;
+  }
+  
+  button:disabled {
+    background: var(--nippon-gray);
+    cursor: not-allowed;
+  }
+  
+  #status {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+  }
+  
+  .error {
+    background: #fbe9e7;
+    color: #c62828;
+    border: 1px solid #ffab91;
+  }
+  
+  .tracking-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .tracking-active {
+    display: block;
+    border-left: 4px solid var(--nippon-red);
+  }
+  
+  #location-permission {
+    background: #fff3e0;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ffe0b2;
+    display: none;
+  }
+  
+  .permission-buttons {
+    margin-top: 10px;
+  }
+  
+  .permission-buttons button {
+    margin-right: 10px;
+  }
+  
+  .secondary-button {
+    background: var(--nippon-blue);
+  }
+  
+  .secondary-button:hover {
+    background: #142a4f;
+  }
+  
+  #map { width: 100%; height: 300px; margin-top: 20px; }
+  h1 { font-size: 1.2em; }
+  p { font-size: 0.9em; }
+  #tracking-status {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+  }
+  
+  .status {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+    max-width: 80%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .status.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+  }
+  
+  .status.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+  }
+  
+  .status.info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #bbdefb;
+  }
+  
+  .permission-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    border: 1px solid #ddd;
+  }
+  
+  .ios-note {
+    color: var(--nippon-red);
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  
+  .ios-instructions {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  .ios-instructions li {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .permission-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .primary-button {
+    background: var(--nippon-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .secondary-button {
+    background: #666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #tracking-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .pulse {
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+  }
+  
+  #trackingButton {
+    background: var(--nippon-red);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #trackingButton:hover {
+    background: #c41920;
+  }
+  
+  #trackingButton[disabled] {
+    background: var(--nippon-gray);
+    cursor: not-allowed;
+  }
+  
+  #install-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--nippon-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  .pwa-notice {
+    margin: 20px 0;
+    padding: 15px;
+    background: #e3f2fd;
+    border-radius: 4px;
+    border: 1px solid #bbdefb;
+  }
